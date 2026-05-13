@@ -165,7 +165,7 @@
 
         /* Categoria */
 
-        .categoria-saida {
+        .categoria-entrada, .categoria-saida {
             display: none;
         }
 
@@ -256,7 +256,7 @@
                 <input type="number" name="valor" required>
 
                 <label for="categoria">Categoria</label>
-                <select name="categoria-entrada" class="categoria-entrada ativo"> <!-- Entrada -->
+                <select name="categoriaEntrada" class="categoria-entrada ativo"> <!-- Entrada -->
                     <option value="selecionar" selected disabled>Selecione uma categoria</option>
                     <option value="salario">💰 Salário</option>
                     <option value="freelance">💻 Freelance</option>
@@ -278,13 +278,13 @@
 
                 <div class="btn-entrada-saida">
                     <label for="tipo">Tipo</label>
-                    <button class="entrada">⬆ Entrada</button>
-                    <button class="saida">⬇ Sainda</button>
+                    <button name="entrada" type="button" class="entrada">⬆ Entrada</button>
+                    <button name="saida" type="button" class="saida">⬇ Saida</button>
                 </div>
 
                 <div class="data">
                     <label for="data">Data</label>
-                    <input type="date" name="data-atual" id="data-atual">
+                    <input type="date" name="dataAtual" id="data-atual">
                 </div>
 
                 <div class="btn-enviar-transacao">
@@ -294,6 +294,55 @@
             </form>
         </div>
     </div>
+
+    <script>
+        const transacoes = document.querySelector(".transacoes");
+        const listaDeDados = [];
+
+        const btnSaida = document.querySelector(".saida");
+        const categoriaSaida = document.querySelector(".categoria-saida");
+
+        const btnEntrada = document.querySelector(".entrada");
+        const categoriaEntrada = document.querySelector(".categoria-entrada");
+
+        let tipoSelecionado = "entrada";
+
+        btnSaida.addEventListener("click", event => {
+            tipoSelecionado = "saida";
+            btnSaida.classList.toggle("ativo");
+            categoriaEntrada.classList.remove("ativo")
+            categoriaSaida.classList.add("ativo");
+        })
+
+        btnEntrada.addEventListener("click", event => {
+            tipoSelecionado = "entrada";
+            btnEntrada.classList.toggle("ativo");
+            categoriaSaida.classList.remove("ativo");
+            categoriaEntrada.classList.add("ativo")
+        })
+
+
+        transacoes.addEventListener("submit", event => {
+            event.preventDefault();
+
+            const novoValor = {
+                descricao: event.target.descricao.value,
+                valor: event.target.valor.value,
+                escolha: tipoSelecionado,
+                data: event.target.dataAtual.value || new Date().toISOString().split("T")[0]
+            }
+            listaDeDados.push(novoValor);
+            salvarLocalStorage(listaDeDados);
+            transacoes.reset();
+
+            console.log(listaDeDados)
+        })
+
+        function salvarLocalStorage(parametro){
+            return localStorage.setItem("listaTransacoes", JSON.stringify(parametro));
+        }
+
+    </script>
 </body>
 
 </html>
