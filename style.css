@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(135deg, #edf2f7, #dbe7f3);
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 5px;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-bar a {
+    background-color: bisque;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 14px;
+    background: #4a90e2;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.nav-bar a:hover {
+    background: #357abd;
+
+    transform: translateY(-2px);
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-right: 20px;
+    border: 1px solid black;
+    padding: 30px;
+}
+
+.nav-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-topo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 100px;
+    padding: 30px;
+}
+
+.cards-principais {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.card-totais {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.card-totais a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    padding: 50px 0px;
+    width: 100%;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.cards-graficos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-evolucao, .card-despesasCategoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    padding: 100px;
+    width: 100%;
+}
+
+
+

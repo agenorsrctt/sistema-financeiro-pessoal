@@ -1,20 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-body {
-    min-height: 100vh;
-
-    background:
-        linear-gradient(135deg, #edf2f7, #dbe7f3);
-
-    padding: 30px;
-}
-
 /* BOTÃO ABRIR MODAL */
 
 .abrir-modal {
@@ -256,25 +239,4 @@ body {
     background: #357abd;
 
     transform: translateY(-2px);
-}
-
-/* RESPONSIVIDADE */
-
-@media (max-width: 768px) {
-
-    body {
-        padding: 20px;
-    }
-
-    .formulario {
-        padding: 25px;
-    }
-
-    .transacoes h2 {
-        font-size: 28px;
-    }
-
-    .btn-enviar-transacao {
-        flex-direction: column;
-    }
 }

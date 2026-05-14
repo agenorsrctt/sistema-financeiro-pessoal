@@ -1,6 +1,6 @@
 export function carregarScriptBtn() {
     const transacoes = document.querySelector(".transacoes");
-    const listaDeDados = [];
+    const listaDeDados = JSON.parse(localStorage.getItem("listaTransacoes")) || [];
 
     const btnSaida = document.querySelector(".saida");
     const categoriaSaida = document.querySelector(".categoria-saida");

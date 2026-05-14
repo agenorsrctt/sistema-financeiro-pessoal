@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Controle Financeiro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <div class="aside">
+
+        <div class="logo">
+            <h2>Financeiro</h2>
+            <p>Pessoal</p>
+        </div>
+
+        <div class="cards">
+            <nav class="nav-cards">
+                <a href="#">Dashboard</a>
+                <a href="#">Transações</a>
+                <a href="#">Categorias</a>
+                <a href="#">Relatórios</a>
+                <a href="#">Metas</a>
+                <a href="#">Exportar CSV</a>
+                <a href="#">Configurações</a>
+            </nav>
+        </div>
+
+        <div class="cardTotais">
+            <h2>Exibir cards</h2>
+        </div>
+    </div>
+
+    <div class="conteudo-principal">
+        <div class="container-topo">
+            <header>
+                <div class="menu">
+                    <h2>Dashboard</h2>
+                    <p>Visão geral da sua vida financeira</p>
+                </div>
+                <div class="navTopo">
+                    <nav class="nav-bar">
+                        <a href="#" id="me-ano">Mês/Ano</a>
+
+                    </nav>
+                </div>
+            </header>
+        </div>
+
+
+        <div class="cards-principais">
+            <div class="card-totais">
+                <a href="">Receitas</a>
+                <a href="">Despesas</a>
+                <a href="">Saldo</a>
+                <a href="">Total Geral</a>
+            </div>
+
+            <div class="cards-graficos">
+                <div class="card-evolucao">
+                    <h2>Grafico da evolução</h2>
+                </div>
+
+                <div class="card-despesasCategoria">
+                    <h2>Grafico de Despesas</h2>
+                </div>
+            </div>
+
+            <div class="ultimas-transacoes"></div>
+        </div>
+    </div>
+
+
     <script type="module" src="modules/modulo-transacao/js/app.js"></script>
+    <script type="module" src="modules/modulo-exibirTabela/js/app.js"></script>
 </body>
+
 </html>

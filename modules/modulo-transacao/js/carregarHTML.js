@@ -56,5 +56,6 @@ export function carregarHTML() {
         </div>
     `;
 
-    document.body.appendChild(containerNvTransacaoModal);
+    const nav = document.querySelector(".nav-bar");
+    nav.appendChild(containerNvTransacaoModal);
 }

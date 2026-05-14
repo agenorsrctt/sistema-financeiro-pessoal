@@ -1,0 +1,25 @@
+.container-tabela {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+    background-color: aliceblue;
+    padding: 50px;
+}
+
+.container-tabela table {
+    width: 100%;
+}
+
+.container-tabela table th {
+    background-color: rgba(0, 0, 0, 0.103);
+}
+
+.container-tabela table th,
+.container-tabela table td {
+    padding: 10px 20px;
+    border: none;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+}
