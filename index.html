@@ -26,11 +26,8 @@
             <nav class="nav-cards">
                 <a href="#">📊 Dashboard</a>
                 <a href="#">💸 Transações</a>
-                <a href="#">🏷️ Categorias</a>
                 <a href="#">📈 Relatórios</a>
-                <a href="#">🎯 Metas</a>
                 <a href="#">📄 Exportar CSV</a>
-                <a href="#">⚙️ Configurações</a>
             </nav>
         </div>
 
@@ -58,19 +55,49 @@
 
         <div class="cards-principais">
             <div class="card-totais">
-                <a href="">Receitas</a>
-                <a href="">Despesas</a>
-                <a href="">Saldo</a>
-                <a href="">Total Geral</a>
+                <a href="">
+                    <div class="imgReceita">💰</div>
+                    <div class="cardsA">
+                        <p>Receita</p>
+                        <div id="receitas"></div>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="imgDespesa">💸</div>
+                    <div class="cardsA">
+                        <p>Despesa</p>
+                        <div id="despesas"></div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="imgSaldo">⚖️</div>
+                    <div class="cardsA">
+                        <p>Saldo</p>
+                        <div id="saldo"></div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="imgGeral">📊</div>
+                    <div class="cardsA">
+                        <p>Total Geral</p>
+                        <div id="geral"></div>
+                    </div>
+                </a>
             </div>
 
             <div class="cards-graficos">
                 <div class="card-evolucao">
                     <h2>Grafico da evolução</h2>
+                    <canvas id="evolucao"></canvas>
                 </div>
 
                 <div class="card-despesasCategoria">
                     <h2>Grafico de Despesas</h2>
+                    <div class="grafico">
+                        <canvas id="grafico"></canvas>
+                        <div class="legendas"></div>
+                    </div>
                 </div>
             </div>
 
@@ -81,6 +108,8 @@
 
     <script type="module" src="modules/modulo-transacao/js/app.js"></script>
     <script type="module" src="modules/modulo-exibirTabela/js/app.js"></script>
+    <script type="module" src="modules/modulo-cardsGraficos/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>

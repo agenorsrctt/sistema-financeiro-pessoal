@@ -6,6 +6,7 @@
     gap: 30px;
     background-color: aliceblue;
     padding: 50px;
+    border-radius: 20px;
 }
 
 .container-tabela table {
@@ -13,13 +14,52 @@
 }
 
 .container-tabela table th {
-    background-color: rgba(0, 0, 0, 0.103);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .container-tabela table th,
 .container-tabela table td {
     padding: 10px 20px;
     border: none;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.container-tabela table td {
     text-align: left;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+}
+
+.despesas {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.05);
+}
+
+.receitas {
+    color: green;
+    background-color: rgba(0, 128, 0, 0.05);
+}
+
+.tdAcoes {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tdAcoes button {
+    padding: 5px 20px;
+    width: 100%;
+    transition: 0.3s;
+    border-radius: 5px;
+    border: transparent;
+    background-color: aliceblue;
+}
+
+.tdAcoes button:hover {
+    transform: translateY(-5px);
+    filter: brightness(1.1);
+    background-color: rgba(255, 0, 0, 0.199);
+    border-color: red;
 }

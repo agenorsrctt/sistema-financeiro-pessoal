@@ -16,24 +16,25 @@ export function carregarHTML() {
                     <input type="number" name="valor" required>
 
                     <label for="categoria">Categoria</label>
+
                     <select name="categoriaEntrada" class="categoria-entrada ativo"> <!-- Entrada -->
-                        <option value="selecionar" selected disabled>Selecione uma categoria</option>
-                        <option value="salario">💰 Salário</option>
-                        <option value="freelance">💻 Freelance</option>
-                        <option value="venda">🛒 Venda</option>
-                        <option value="outros">📦 Outros</option>
+                        <option value="Selecionar" selected disabled>Selecione uma categoria</option>
+                        <option value="💰 Salário">💰 Salário</option>
+                        <option value="💻 Freelance">💻 Freelance</option>
+                        <option value="🛒 Venda">🛒 Venda</option>
+                        <option value="📦 Outros">📦 Outros</option>
                     </select>
 
-                    <select name="categoria-saida" class="categoria-saida" required>
-                        <option value="selecionar" selected disabled>Selecione uma categoria</option>
-                        <option value="alimentacao">🍔 Alimentação</option>
-                        <option value="transporte">🚗 Transporte</option>
-                        <option value="moradia">🏠 Moradia</option>
-                        <option value="saude">❤️ Saúde</option>
-                        <option value="educacao">📚 Educação</option>
-                        <option value="lazer">🎮 Lazer</option>
-                        <option value="compras">🛍️ Compras</option>
-                        <option value="outros">📦 Outros</option>
+                    <select name="categoria-saida" class="categoria-saida">
+                        <option value="Selecionar" selected disabled>Selecione uma categoria</option>
+                        <option value="🍔 Alimentação">🍔 Alimentação</option>
+                        <option value="🚗 Transporte">🚗 Transporte</option>
+                        <option value="🏠 Moradia">🏠 Moradia</option>
+                        <option value="❤️ Saúde">❤️ Saúde</option>
+                        <option value="📚 Educação">📚 Educação</option>
+                        <option value="🎮 Lazer">🎮 Lazer</option>
+                        <option value="🛍️ Compras">🛍️ Compras</option>
+                        <option value="📦 Outros">📦 Outros</option>
                     </select>
 
                     <div class="btn-entrada-saida">

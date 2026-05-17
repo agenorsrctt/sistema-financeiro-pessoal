@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gráfico JS</title>
+</head>
+<body>
+
+  <canvas id="grafico"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    const ctx = document.getElementById('grafico');
+
+    new Chart(ctx, {
+      type: 'area',
+      data: {
+        labels: ['Janeiro', 'Fevereiro', 'Março'],
+        datasets: [{
+          label: 'Gastos',
+          data: [500, 300, 800]
+        }]
+      }
+    });
+  </script>
+
+</body>
+</html>

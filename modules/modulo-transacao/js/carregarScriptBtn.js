@@ -8,28 +8,38 @@ export function carregarScriptBtn() {
     const btnEntrada = document.querySelector(".entrada");
     const categoriaEntrada = document.querySelector(".categoria-entrada");
 
-    let tipoSelecionado = "entrada";
-    let categoriaEscolhida = ""
+    let tipoSelecionado = "Entrada";
 
     btnSaida.addEventListener("click", event => {
-        tipoSelecionado = "saida";
-        categoriaEscolhida = categoriaSaida.value;
-        btnSaida.classList.toggle("ativo");
+        tipoSelecionado = "Saída";
+
+        btnEntrada.classList.remove("ativo");
+        btnSaida.classList.add("ativo");
+
         categoriaEntrada.classList.remove("ativo")
         categoriaSaida.classList.add("ativo");
     })
 
     btnEntrada.addEventListener("click", event => {
-        tipoSelecionado = "entrada";
-        categoriaEscolhida = categoriaEntrada.value;
-        btnEntrada.classList.toggle("ativo");
+        tipoSelecionado = "Entrada";
+
+        btnSaida.classList.remove("ativo");
+        btnEntrada.classList.add("ativo");
+
         categoriaSaida.classList.remove("ativo");
         categoriaEntrada.classList.add("ativo")
     })
 
+    let categoriaEscolhida;
 
     transacoes.addEventListener("submit", event => {
         event.preventDefault();
+
+        if (tipoSelecionado === "Entrada") {
+            categoriaEscolhida = categoriaEntrada.value;
+        } else {
+            categoriaEscolhida = categoriaSaida.value;
+        }
 
         const novoValor = {
             descricao: event.target.descricao.value,
@@ -41,8 +51,7 @@ export function carregarScriptBtn() {
         listaDeDados.push(novoValor);
         salvarLocalStorage(listaDeDados);
         transacoes.reset();
-
-        console.log(listaDeDados)
+        console.log("Categoria Escolhida: ", categoriaEscolhida);
     })
 
     function salvarLocalStorage(parametro) {
