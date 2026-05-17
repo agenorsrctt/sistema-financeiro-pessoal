@@ -130,32 +130,39 @@ export function getDespesas() {
 
         legendas.innerHTML = "";
 
+        const table = document.createElement("table");
+        table.classList.add("tabela-card-despesa");
+
+        const th = document.createElement("tr");
+
+        th.innerHTML = `
+                <th></th>
+                <th></th>
+                <th></th>
+            `;
+
+        table.appendChild(th);
+
         dados.forEach((dado, index) => {
 
             if (dado.escolha === "Saída") {
 
-                const item = document.createElement("div");
-                item.classList.add("item-legenda");
+                const tr = document.createElement("tr");
+                tr.classList.add("item-legenda");
 
-                const cor = document.createElement("span");
-                cor.classList.add("cor-legenda");
+                tr.innerHTML = `
 
-                cor.style.backgroundColor = cores[index];
+                <td> <span class="cor-legenda" style="background-color:${cores[index]}"></span> </td>
+                <td>${dado.descricao}</td>
+                <td>R$${Number(dado.valor).toFixed(2)}</td>
+                `;
 
-                const texto = document.createElement("p");
-                texto.innerText = dado.descricao;
-
-                const valor = document.createElement("p");
-                valor.innerText = `R$ ${dado.valor}`;
-
-                item.appendChild(cor);
-                item.appendChild(texto);
-                item.appendChild(valor);
-
-                legendas.appendChild(item);
+                table.appendChild(tr);
             }
 
         });
+
+        legendas.appendChild(table);
     }
 
     carregarDescricoes();

@@ -212,7 +212,7 @@ header {
     gap: 10px;
 }
 
-.cor-legenda{
+.cor-legenda {
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -230,6 +230,51 @@ header {
     flex-direction: column;
 }
 
-.imgGeral, .imgSaldo, .imgDespesa, .imgReceita {
+.imgGeral,
+.imgSaldo,
+.imgDespesa,
+.imgReceita {
     font-size: 40px;
+}
+
+/* tabela ao lado do card de despesas */
+
+.tabela-card-despesa {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.item-legenda {
+    height: 45px;
+}
+
+.item-legenda td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+/* coluna da bolinha */
+.item-legenda td:nth-child(1) {
+    width: 30px;
+    text-align: center;
+}
+
+/* descrição */
+.item-legenda td:nth-child(2) {
+    width: 70%;
+    text-align: left;
+    font-weight: 500;
+}
+
+/* valor */
+.item-legenda td:nth-child(3) {
+    text-align: right;
+    font-weight: bold;
+}
+
+.cor-legenda {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
 }
