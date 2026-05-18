@@ -52,6 +52,7 @@ export function carregarScriptBtn() {
         salvarLocalStorage(listaDeDados);
         transacoes.reset();
         console.log("Categoria Escolhida: ", categoriaEscolhida);
+        location.reload();
     })
 
     function salvarLocalStorage(parametro) {

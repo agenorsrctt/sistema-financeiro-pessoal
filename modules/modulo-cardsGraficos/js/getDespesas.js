@@ -126,7 +126,7 @@ export function getDespesas() {
 
     function carregarDescricoes() {
 
-        const legendas = document.querySelector(".legendas");
+        const legendas = document.querySelector("#legendas");
 
         legendas.innerHTML = "";
 
@@ -143,22 +143,23 @@ export function getDespesas() {
 
         table.appendChild(th);
 
-        dados.forEach((dado, index) => {
+        const somenteDespesas = dados.filter(
+            dado => dado.escolha === "Saída"
+        );
 
-            if (dado.escolha === "Saída") {
+        somenteDespesas.forEach((dado, index) => {
 
-                const tr = document.createElement("tr");
-                tr.classList.add("item-legenda");
+            const tr = document.createElement("tr");
+            tr.classList.add("item-legenda");
 
-                tr.innerHTML = `
+            tr.innerHTML = `
 
                 <td> <span class="cor-legenda" style="background-color:${cores[index]}"></span> </td>
                 <td>${dado.descricao}</td>
                 <td>R$${Number(dado.valor).toFixed(2)}</td>
                 `;
 
-                table.appendChild(tr);
-            }
+            table.appendChild(tr);
 
         });
 

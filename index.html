@@ -31,78 +31,92 @@
             </nav>
         </div>
 
-        <div class="cardTotais">
-            <h2>Exibir cards</h2>
-        </div>
     </div>
 
     <div class="conteudo-principal">
+
         <div class="container-topo">
             <header>
+
                 <div class="menu">
                     <h2>Dashboard</h2>
                     <p>Visão geral da sua vida financeira</p>
                 </div>
-                <div class="navTopo">
-                    <nav class="nav-bar">
-                        <a href="#" id="me-ano">Mês/Ano</a>
 
-                    </nav>
+                <div class="navTopo">
+                    <nav class="nav-bar"></nav>
                 </div>
+                
             </header>
         </div>
 
 
         <div class="cards-principais">
+
+            <!-- cards-totais -->
+
             <div class="card-totais">
-                <a href="">
+
+                <div>
                     <div class="imgReceita">💰</div>
                     <div class="cardsA">
                         <p>Receitas</p>
                         <div id="receitas"></div>
                     </div>
-                </a>
+                </div>
 
-                <a href="">
+                <div>
                     <div class="imgDespesa">💸</div>
                     <div class="cardsA">
                         <p>Despesas</p>
                         <div id="despesas"></div>
                     </div>
-                </a>
-                <a href="">
+                </div>
+
+                <div>
                     <div class="imgSaldo">⚖️</div>
                     <div class="cardsA">
                         <p>Saldo</p>
                         <div id="saldo"></div>
                     </div>
-                </a>
-                <a href="">
+                </div>
+                
+                <div>
                     <div class="imgGeral">📊</div>
                     <div class="cardsA">
                         <p>Total Geral</p>
                         <div id="geral"></div>
                     </div>
-                </a>
+                </div>
+
             </div>
 
+
+            <!-- cards graficos -->
+
             <div class="cards-graficos">
+
                 <div class="card-evolucao">
                     <h2>Grafico da evolução</h2>
-                    <canvas id="evolucao"></canvas>
-                </div>
-
-                <div class="card-despesasCategoria">
-                    <h2>Grafico de Despesas</h2>
-                    <div class="grafico">
-                        <canvas id="grafico"></canvas>
-                        <div class="legendas"></div>
+                    <div class="canvas">
+                        <canvas id="evolucao"></canvas>
                     </div>
                 </div>
+
+                <div class="card-despesas">
+                    <h2>Grafico de Despesas</h2>
+                    <div class="grafico-legenda">
+                        <canvas id="grafico"></canvas>
+                        <div id="legendas"></div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="ultimas-transacoes"></div>
+
         </div>
+
     </div>
 
 

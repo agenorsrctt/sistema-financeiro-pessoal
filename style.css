@@ -1,3 +1,4 @@
+/* Raiz */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,8 @@
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/* Corpo */
 
 body {
     min-height: 100vh;
@@ -16,6 +19,8 @@ body {
     flex-direction: row;
 }
 
+/* =================================== */
+/* Topo da pagina */
 header {
     display: flex;
     flex-direction: row;
@@ -42,23 +47,8 @@ header {
 
 }
 
-.nav-bar a {
-    padding: 14px 24px;
-    border: none;
-    border-radius: 14px;
-    background: #4a90e2;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.nav-bar a:hover {
-    background: #357abd;
-    transform: translateY(-2px);
-}
-
+/* =================================== */
+/* Barra Lateral */
 .aside {
     display: flex;
     flex-direction: column;
@@ -91,6 +81,12 @@ header {
     background-color: rgba(73, 184, 69, 0.5);
 }
 
+/* =================================== */
+
+.conteudo-principal {
+    width: 100%;
+}
+/* Dentro da div do conteudo-principal */
 .container-topo {
     display: flex;
     flex-direction: column;
@@ -102,21 +98,17 @@ header {
     color: white;
 }
 
+/* Dentro da div do conteudo-principal */
 .cards-principais {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding: 30px;
-}
-
-.conteudo-principal {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+    padding: 10px;
     width: 100%;
-
 }
 
+/* =================================== */
+/* Dentro da div card-totais */
 .card-totais {
     display: flex;
     flex-direction: row;
@@ -126,13 +118,13 @@ header {
 
 }
 
-.card-totais a {
+.card-totais div {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: aliceblue;
-    padding: 50px 0px;
+
     width: 100%;
     margin: 5px;
     border-radius: 10px;
@@ -140,28 +132,36 @@ header {
 
 }
 
-.cards-graficos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-
-.card-evolucao,
-.card-despesasCategoria {
+.card-totais div .cardsA {
     display: flex;
     flex-direction: column;
+}
+
+.imgGeral,
+.imgSaldo,
+.imgDespesa,
+.imgReceita {
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+    width: 0;
+}
+
+/* =================================== */
+/* Dentro de Cards-totais */
+.img { /* $ FINANCEIRO - PESSOAL */
+    font-size: 35px;
+    background-color: rgba(73, 184, 69, 0.5);
+    padding: 10px 20px;
+    border-radius: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
-    width: 100%;
-    border-radius: 15px;
-    padding: 50px;
-    gap: 10px;
 }
 
 
+/* =================================== */
+/* Dentro de ASIDE */
 .logo {
     display: flex;
     flex-direction: row;
@@ -172,109 +172,7 @@ header {
     align-items: center;
 }
 
-.img {
-    font-size: 35px;
-    background-color: rgba(73, 184, 69, 0.5);
-    padding: 10px 20px;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .texto p {
     color: rgba(73, 184, 69);
 }
 
-#grafico {
-    width: 300px;
-    padding: 0px;
-    margin: 0px;
-}
-
-.grafico {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.legendas {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.item-legenda {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.cor-legenda {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-#evolucao {
-    width: 600px;
-    padding: 0px;
-    margin: 0px;
-}
-
-.cardsA {
-    display: flex;
-    flex-direction: column;
-}
-
-.imgGeral,
-.imgSaldo,
-.imgDespesa,
-.imgReceita {
-    font-size: 40px;
-}
-
-/* tabela ao lado do card de despesas */
-
-.tabela-card-despesa {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.item-legenda {
-    height: 45px;
-}
-
-.item-legenda td {
-    padding: 10px;
-    vertical-align: middle;
-}
-
-/* coluna da bolinha */
-.item-legenda td:nth-child(1) {
-    width: 30px;
-    text-align: center;
-}
-
-/* descrição */
-.item-legenda td:nth-child(2) {
-    width: 70%;
-    text-align: left;
-    font-weight: 500;
-}
-
-/* valor */
-.item-legenda td:nth-child(3) {
-    text-align: right;
-    font-weight: bold;
-}
-
-.cor-legenda {
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-}

@@ -26,7 +26,7 @@ export function logicaUltimasTransacoes() {
             `;
 
     tabela.appendChild(th);
-    listaAtualizada.forEach(lista => {
+    listaAtualizada.forEach((lista, indice) => {
 
         const td = document.createElement("tr");
 
@@ -57,6 +57,9 @@ export function logicaUltimasTransacoes() {
         editar.textContent = "✏️ Editar";
         excluir.textContent = "🗑️ Excluir";
 
+        editar.classList.add("editar");
+        excluir.classList.add("excluir");
+
         tdAcoes.appendChild(editar);
         tdAcoes.appendChild(excluir);
 
@@ -66,4 +69,5 @@ export function logicaUltimasTransacoes() {
 
         tabela.appendChild(td);
     })
+
 }

@@ -105,7 +105,7 @@ export function getEvolucao() {
         },
 
         options: {
-            responsive: false,
+            responsive: true,
         }
 
     });
