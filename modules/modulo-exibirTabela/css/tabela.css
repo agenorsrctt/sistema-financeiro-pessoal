@@ -30,6 +30,22 @@
     text-align: left;
 }
 
+.titulo-busca {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: 200px;
+}
+
+.titulo-busca input {
+    padding: 8px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
 .despesas {
     color: red;
     background-color: rgba(255, 0, 0, 0.05);

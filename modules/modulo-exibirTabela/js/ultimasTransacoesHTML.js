@@ -6,10 +6,13 @@ export function tabelaTransacoes() {
 
     container.innerHTML = `
         <div class="container-tabela">
-            <h2>Últimas Transações</h2>
 
-            <table class="tabela">
-            </table>
+            <div class="titulo-busca">
+                <h2>Últimas Transações</h2>
+
+            </div>
+
+            <table class="tabela"></table>
         </div>
     `;
 
