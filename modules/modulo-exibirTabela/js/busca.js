@@ -10,22 +10,26 @@ export function carregarInput() {
         }
     }
 
+    function salvarLocalStorage(parametro) {
+        return localStorage.setItem("listaTransacoes", JSON.stringify(parametro));
+    }
+
     const buscar = document.querySelector(".titulo-busca");
 
     if (buscar.querySelector("input")) return;
 
     const input = document.createElement("input");
-
-    const itensTabela = carregarLocalStorage();
-
     input.innerHTML = ""
-
     input.placeholder = "Digite a descrição do item";
 
     buscar.appendChild(input);
 
+
+    let indiceTabela = 0;
     input.addEventListener("input", event => {
         event.preventDefault();
+
+        const itensTabela = carregarLocalStorage();
 
         const item = event.target.value.toLowerCase();
 
@@ -63,18 +67,33 @@ export function carregarInput() {
                     <td class="despesas">${r.escolha}</td>
                     <td class="despesas">${r.data}</td>
                     <td class="despesas">R$ ${r.valor}</td>
-                    <td ></td>
                     `;
-                }else{
+                } else {
                     td.innerHTML = `
                     <td class="receitas">${r.descricao}</td>
                     <td class="receitas">${r.categoria}</td>
                     <td class="receitas">${r.escolha}</td>
                     <td class="receitas">${r.data}</td>
                     <td class="receitas">R$ ${r.valor}</td>
-                    <td class="receitas"></td>
                     `;
                 }
+
+                const editar = document.createElement("button");
+                const excluir = document.createElement("button");
+                const tdAcoes = document.createElement("td");
+
+                editar.textContent = "✏️ Editar";
+                excluir.textContent = "🗑️ Excluir";
+
+                editar.classList.add("editar");
+                excluir.classList.add("excluir");
+
+                tdAcoes.appendChild(editar);
+                tdAcoes.appendChild(excluir);
+
+                tdAcoes.classList.add("tdAcoes");
+
+                td.appendChild(tdAcoes)
 
                 tabela.appendChild(td);
             })
@@ -85,6 +104,6 @@ export function carregarInput() {
             `;
             tabela.appendChild(td);
         }
+
     })
-    console.log(itensTabela);
 }

@@ -42,6 +42,7 @@ export function carregarScriptBtn() {
         }
 
         const novoValor = {
+            id: Date.now(),
             descricao: event.target.descricao.value,
             valor: event.target.valor.value,
             categoria: categoriaEscolhida,

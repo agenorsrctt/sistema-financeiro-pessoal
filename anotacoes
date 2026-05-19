@@ -1,0 +1,12 @@
+function carregarLocalStorage() {
+    const getLista = localStorage.getItem("listaTransacoes")
+    if (getLista) {
+        return JSON.parse(getLista);
+    } else {
+        return [];
+    }
+}
+
+function salvarLocalStorage(parametro) {
+    return localStorage.setItem("listaTransacoes", JSON.stringify(parametro));
+}

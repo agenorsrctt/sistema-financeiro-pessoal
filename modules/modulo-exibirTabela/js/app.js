@@ -5,8 +5,9 @@ import { editar } from "./editar.js";
 import { excluir } from "./excluir.js";
 import { carregarInput } from "./busca.js";
 
-tabelaTransacoes();
+
 carregarStyleHTML();
+tabelaTransacoes();
 logicaUltimasTransacoes();
 editar();
 excluir();

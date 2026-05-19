@@ -86,6 +86,7 @@ header {
 .conteudo-principal {
     width: 100%;
 }
+
 /* Dentro da div do conteudo-principal */
 .container-topo {
     display: flex;
@@ -149,7 +150,8 @@ header {
 
 /* =================================== */
 /* Dentro de Cards-totais */
-.img { /* $ FINANCEIRO - PESSOAL */
+.img {
+    /* $ FINANCEIRO - PESSOAL */
     font-size: 35px;
     background-color: rgba(73, 184, 69, 0.5);
     padding: 10px 20px;
@@ -176,3 +178,20 @@ header {
     color: rgba(73, 184, 69);
 }
 
+
+.github-link,
+.linkedin-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github-link img,
+.linkedin-link img {
+    transition: 0.3s;
+}
+
+.github-link img:hover,
+.linkedin-link img:hover {
+    transform: translateY(-3px) scale(1.03);
+}
